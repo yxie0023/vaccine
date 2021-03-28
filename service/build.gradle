@@ -1,8 +1,6 @@
 //只需要修改 autoPush/imageTag
 buildscript {
     project.ext {
-        //是否推送至服务器
-        autoPush = true
         //打包镜像名称
         imagesTag = "edu.monash." + "vaccine"
 
@@ -39,7 +37,7 @@ task buildDeployJar(type: Exec, dependsOn: buildRunJar) {
 
 //构建docker镜像
 task buildDocker(type: Docker, dependsOn: buildRunJar) {
-    push = autoPush
+    push = "true"
     tag = imagesTag
     applicationName = jar.baseName
     dockerfile = file('src/main/docker/Dockerfile')
