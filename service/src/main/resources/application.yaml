@@ -1,0 +1,3 @@
+# springboot配置文件
+server:
+  port: 8880

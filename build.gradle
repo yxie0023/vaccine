@@ -5,31 +5,16 @@ buildscript {
         //版本号
         versionTail = new Date().format('yyMMddHHmm')
 
-        //是否推送至服务器
-        autoPush = true
-        //打包镜像名称
-        imagesTag = "10.10.208.193:5000/" + "mp-admin"
-
-        versionTail = new Date().format('yyMMddHHmm')
-
         repoClosure = {
             mavenLocal()
-            maven { url "http://urcs.feinno.com:5260/repository/maven-public/" }
+            maven { url "http://urcs.feinno.com:5260/repository/maven-public/"}
             maven { url "http://maven.aliyun.com/nexus/content/groups/public/" }
             mavenCentral()
 
         }
-
-        dependencies {
-            classpath 'se.transmode.gradle:gradle-docker:1.2'
-        }
     }
     repositories repoClosure
 }
-
-apply plugin: 'docker'
-
-version = "3.0.0-$versionTail"
 
 allprojects { project ->
 
@@ -39,7 +24,7 @@ allprojects { project ->
 }
 
 // gradle构建对外接口依赖包时,排除下面不需要的Module,只暴露接口
-def mavenPublishIgnoreList = ['im:activationproxy', 'im:configcenter', '']
+def mavenPublishIgnoreList = ['im:activationproxy','im:configcenter','']
 
 subprojects { project ->
 
@@ -56,8 +41,6 @@ subprojects { project ->
     }
 
     dependencies {
-        testCompile group: 'junit', name: 'junit', version: '4.12'
-            compile group: 'org.springframework.boot', name: 'spring-boot-starter-web', version: '2.1.6.RELEASE'
     }
 
     task sourceJar(type: Jar) {
@@ -73,40 +56,6 @@ subprojects { project ->
                     from components.java
                     artifact sourceJar
                 }
-            }
-        }
-    }
-
-    jar {
-        manifest {
-        }
-        enabled = true
-
-    }
-    //可运行jar
-    task buildRunJar(type: Copy, dependsOn: build) {
-        from configurations.runtime
-        from 'src/main/resources'
-        into 'build/libs' // 目标位置
-    }
-
-    //打包部署jar包
-    task buildDeployJar(type: Exec, dependsOn: buildRunJar) {
-        workingDir 'build/libs'
-        commandLine "./deploy.sh"
-    }
-
-
-    //构建docker镜像
-    task buildDocker(type: Docker, dependsOn: buildRunJar) {
-        push = autoPush
-        tag = imagesTag
-        applicationName = jar.baseName
-        dockerfile = file('src/main/docker/Dockerfile')
-        doFirst {
-            copy {
-                from 'build/libs'
-                into stageDir
             }
         }
     }
