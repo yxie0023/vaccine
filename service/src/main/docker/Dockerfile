@@ -1,6 +1,6 @@
 # docker打包需要的基础文件
 #基础镜像
-FROM 10.10.208.193:5000/urcs/java:8
+FROM devtest22/java8ubuntu
 
 VOLUME ["/tmp"]
 

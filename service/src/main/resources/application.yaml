@@ -1,3 +1,16 @@
 # springboot配置文件
 server:
   port: 8880
+
+spring:
+  datasource:
+    url: jdbc:mysql://172.16.175.216:3306/projectfit5120?useUnicode=true&characterEncoding=UTF-8
+    username: root
+    password: 123456
+#    dbcp2:
+#      driver: com.mysql.jdbc.Driver
+
+#配置mybatis
+mybatis:
+  #扫描mapper 文件路径
+  mapper-locations: classpath:/mapper/*.xml

@@ -7,7 +7,7 @@ buildscript {
 
         repoClosure = {
             mavenLocal()
-            maven { url "http://urcs.feinno.com:5260/repository/maven-public/"}
+//            maven { url "http://urcs.feinno.com:5260/repository/maven-public/"}
             maven { url "http://maven.aliyun.com/nexus/content/groups/public/" }
             mavenCentral()
 
@@ -19,7 +19,7 @@ buildscript {
 allprojects { project ->
 
     project.repositories rootProject.repoClosure
-    group = 'org.helium'
+    group = 'edu.monash'
     version = "1.0.0-$versionTail"
 }
 
