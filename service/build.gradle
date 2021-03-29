@@ -4,7 +4,7 @@ buildscript {
         //是否推送至服务器
         autoPush = true
         //打包镜像名称
-        imagesTag = "edu.monash." + "vaccine"
+        imagesTag = "yichenelaine/fit5120"
 
     }
 

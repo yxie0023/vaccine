@@ -1,6 +1,6 @@
 # docker打包需要的基础文件
 #基础镜像
-FROM devtest22/java8ubuntu
+FROM wanbaolu/java:8
 
 VOLUME ["/tmp"]
 
