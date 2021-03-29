@@ -2,7 +2,7 @@
 buildscript {
     project.ext {
         //打包镜像名称
-        imagesTag = "edu.monash." + "vaccine"
+        imagesTag = "yichenelaine/fit5120"
 
     }
 
