@@ -5,7 +5,7 @@
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/service/service.iml" filepath="$PROJECT_DIR$/.idea/modules/service/service.iml" group="service" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/service/service_main.iml" filepath="$PROJECT_DIR$/.idea/modules/service/service_main.iml" group="service" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/service/service_test.iml" filepath="$PROJECT_DIR$/.idea/modules/service/service_test.iml" group="service" />
-      <module fileurl="file://$PROJECT_DIR$/vaccine.iml" filepath="$PROJECT_DIR$/vaccine.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/vaccine.iml" filepath="$PROJECT_DIR$/.idea/vaccine.iml" />
     </modules>
   </component>
 </project>
