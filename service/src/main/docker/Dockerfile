@@ -8,6 +8,6 @@ VOLUME ["/tmp"]
 ADD ./* /home/service/
 
 #指定时区
-RUN /bin/cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime && echo 'Asia/Shanghai' >/etc/timezone
+#RUN /bin/cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime && echo 'Asia/Shanghai' >/etc/timezone
 
 ENTRYPOINT ["/home/service/run.sh"]

@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import javax.annotation.Resource;
 import java.util.List;
 
+
 @Controller
 @RequestMapping("/vacTenToNineteen")
 public class VacTenToNineteenController {
@@ -18,7 +19,8 @@ public class VacTenToNineteenController {
     private VacTenToNineteenService vacTenToNineteenService;
 
     @RequestMapping("/getAll")
-    public @ResponseBody List<VacTenToNineteen> getAll(){
+    public @ResponseBody
+    List<VacTenToNineteen> getAll(){
         List<VacTenToNineteen> all = vacTenToNineteenService.getAll();
         return all;
     }
