@@ -2,10 +2,10 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/service/service.iml" filepath="$PROJECT_DIR$/.idea/modules/service/service.iml" group="service" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/service/service_main.iml" filepath="$PROJECT_DIR$/.idea/modules/service/service_main.iml" group="service" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/service/service_test.iml" filepath="$PROJECT_DIR$/.idea/modules/service/service_test.iml" group="service" />
       <module fileurl="file://$PROJECT_DIR$/.idea/vaccine.iml" filepath="$PROJECT_DIR$/.idea/vaccine.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/service/vaccine.service.iml" filepath="$PROJECT_DIR$/.idea/modules/service/vaccine.service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/service/vaccine.service.main.iml" filepath="$PROJECT_DIR$/.idea/modules/service/vaccine.service.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/service/vaccine.service.test.iml" filepath="$PROJECT_DIR$/.idea/modules/service/vaccine.service.test.iml" />
     </modules>
   </component>
 </project>

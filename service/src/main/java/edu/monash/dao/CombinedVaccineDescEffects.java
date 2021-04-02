@@ -5,7 +5,7 @@ public class CombinedVaccineDescEffects {
 
     private String description;
 
-    private String sideEffects;
+    private String sideEffect;
 
     private String vaccineAgeType;
 
@@ -13,8 +13,8 @@ public class CombinedVaccineDescEffects {
         return description;
     }
 
-    public String getSideEffects() {
-        return sideEffects;
+    public String getSideEffect() {
+        return sideEffect;
     }
 
     public String getVaccineName() {
@@ -25,8 +25,8 @@ public class CombinedVaccineDescEffects {
         return vaccineAgeType;
     }
 
-    public void setSideEffects(String sideEffects) {
-        this.sideEffects = sideEffects;
+    public void setSideEffect(String sideEffect) {
+        this.sideEffect = sideEffect;
     }
 
     public void setDescription(String description) {
