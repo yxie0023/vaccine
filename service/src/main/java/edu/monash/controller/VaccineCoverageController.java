@@ -18,6 +18,7 @@ public class VaccineCoverageController {
     @Resource
     private VaccineCoverageService vaccineCoverageService;
 
+    // the new interface to do the echarts ---- vaccine compare
     @RequestMapping("/getVaccineRate")
     public @ResponseBody
     List<VaccineCoverage> getVaccineRate(){
