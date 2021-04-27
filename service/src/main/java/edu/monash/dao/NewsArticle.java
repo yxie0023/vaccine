@@ -1,11 +1,23 @@
 package edu.monash.dao;
 
+import java.util.Date;
+
 public class NewsArticle {
     private String vaccineName;
 
     private String title;
 
     private String url;
+
+    private Date date;
+
+    public Date getDate() {
+        return date;
+    }
+
+    public void setDate(Date date) {
+        this.date = date;
+    }
 
     public void setVaccineName(String vaccineName) {
         this.vaccineName = vaccineName;

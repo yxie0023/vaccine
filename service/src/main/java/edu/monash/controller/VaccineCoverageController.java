@@ -1,8 +1,6 @@
 package edu.monash.controller;
 
-import edu.monash.dao.VacTenToNineteen;
 import edu.monash.dao.VaccineCoverage;
-import edu.monash.service.VacTenToNineteenService;
 import edu.monash.service.VaccineCoverageService;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
