@@ -7,7 +7,7 @@ sudo docker run \
     --net=host \
     --env DB_URL="127.0.0.1:3306" \
     -p 8880:8880 \
-   yichenelaine/fit5120:1.0.0-2104272214
+   yichenelaine/fit5120:1.0.0-2104292303
 
 sudo docker update vaccine --restart=always
 
